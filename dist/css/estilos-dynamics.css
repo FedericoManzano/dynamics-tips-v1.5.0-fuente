@@ -185,6 +185,10 @@
     transition: transform 0.3s;
 }
 
+.dropdown ul {
+    list-style: none !important;
+}
+
 
 .dropdown a {
     display: block;

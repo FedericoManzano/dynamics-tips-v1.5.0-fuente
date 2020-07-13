@@ -1,4 +1,4 @@
-# Dynamics Tips v1.0.0
+# Dynamics Tips v1.5.0
 
 Librería que algunas funcionalidades para añadir objetos dinámicos a los elementos de una página web.
 A través de estos elementos se incorporan descripciones, enlaces y eventos que permiten mostrar una buena cantidad de información en espacios reducidos.
@@ -81,9 +81,10 @@ En proyectos SPA cuando disponemos de la librería como una dependencia de nuest
 es el siguiente.
 
 ```js
-import ToolTips from "dynamics-tips/modulos/ToolTis"
+import "dynamics-tips/css/estilos-dynamics.css";
+import ToolTips from "dynamics-tips/modulos/ToolTis";
 // Y donde corresponda lo iniciamos 
-ToolTips.iniciar()
+ToolTips.iniciar();
 ```
 
 ### Comentarios
@@ -109,7 +110,8 @@ La clase disparadora en este caso es `com-trigger`.
 Al igual que los tooltips los comentarios tenemos que inicializarlos en proyectos SPA
 
 ```js
-import ComentariosDinamicos from "dynamics-tips/modulos/ComentariosDinamicos"
+import "dynamics-tips/css/estilos-dynamics.css";
+import ComentariosDinamicos from "dynamics-tips/modulos/ComentariosDinamicos";
 // Y donde corresponda lo iniciamos 
 ComentariosDinamicos.iniciar()
 ```
@@ -165,12 +167,79 @@ atributos al elemento disparador.
 Al igual que los elementos anteriores tenemos que inicializarlos en proyectos SPA
 
 ```js
-import DropDown from "dynamics-tips/modulos/DropDown"
+import "dynamics-tips/css/estilos-dynamics.css";
+import DropDown from "dynamics-tips/modulos/DropDown";
 // Y donde corresponda lo iniciamos 
 DropDown.iniciar()
 ```
 
+### Toast
+
+Es un métod estático que recibe un parámetro json con cuatro atrbutos. 
+Por un lado `html` con el texto a mostrar por el toast, el segundo `clases` un arreglo
+con las clases con los estilos para darle al toast, el tercero `tiempo` con el tiempo en ms 
+que durará el toast en pantalla y el cuarto `cerrar` con un valor booleano que activa y deactiva el 
+botón cerrar dentro del toast.
+
+#### Ejemplo
+
+```html
+<!-- Toast por defecto -->
+<button onclick="DY.toast()">Botón</button> 
+```
+En este ejemplo no se le envia ningún parámetro al toast y se muestra el Toast por defecto.
+
+#### Ejemplo 2 
+
+
+```html
+<button onclick="saludar()">Botón</button> 
+
+<script>
+    function saludar () {
+        let  conf = {
+            html: 'Este es un Toast de Dynamics-tips V1.5.0'
+        }
+        DY.toast(conf)
+    }
+</script>
+```
+
+#### Ejemplo 3 
+
+```html
+<button onclick="saludar()">Botón</button> 
+
+<script>
+    function saludar () {
+       let  conf = {
+            html: 'Este es un Toast de Dynamics-tips V1.5.0 gfh dhfhghf fhf ghfhfhf',
+            clases: ["rojo", "borde"],
+            tiempo: 10000,
+            cerrar: true
+        }
+        DY.toast(conf)
+    }
+    // rojo y borde son clases CSS que utilizo como ejemplo puede ser 
+    // cualquier clase CSS que se defina en la hoja de estilos.
+</script>
+```
+
+#### SPA 
+
+```js
+import "dynamics-tips/css/estilos-dynamics.css";
+import Toast from "dynamics-tips/modulos/Toast";
+
+// Cuando queremos llamar al toast simplemente lo hacemos a través de su método 
+// estático
+
+Toast.toast({conf}) // Conf es la configuración antes vista en los ejemplos
+```
+
+
+
 ## Licencia
 
-(MIT) (c) 2020 Dynamics Tis.
+(MIT) (c) 2020 Dynamics Tips.
 
