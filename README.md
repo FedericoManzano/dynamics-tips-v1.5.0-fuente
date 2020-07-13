@@ -11,7 +11,9 @@ Los elementos más conocidos son los tooltips dinámicos que se muestran alreded
 
 Disponemos varias formas de descargar la librería. La más rápida y sensilla es a través del CDN del archivo `dynamics.bundle.min.js`. 
 
-[https://ghcdn.rawgit.org/FedericoManzano/dynamics-tips-v1.0.0/master/dist/js/dynamics.bundle.min.js](https://ghcdn.rawgit.org/FedericoManzano/dynamics-tips-v1.0.0/master/dist/js/dynamics.bundle.min.js)
+[https://ghcdn.rawgit.org/FedericoManzano/dynamics-tips-v1.5.0-fuente/master/dist/js/dynamics.bundle.min.js](https://ghcdn.rawgit.org/FedericoManzano/dynamics-tips-v1.5.0-fuente/master/dist/js/dynamics.bundle.min.js)
+
+En este caso no hace falta incorporar los estilos de manera independiente ya vienen incluidos en el archivo bundle de la librería.
 
 ```html
 <!DOCTYPE html>
@@ -20,12 +22,33 @@ Disponemos varias formas de descargar la librería. La más rápida y sensilla e
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <script src="https://ghcdn.rawgit.org/FedericoManzano/dynamics-tips-v1.0.0/master/dist/js/dynamics.bundle.min.js"></script>
+        <script src="https://ghcdn.rawgit.org/FedericoManzano/dynamics-tips-v1.5.0-fuente/master/dist/js/dynamics.bundle.min.js"></script>
     
-        <title>Document</title>
+        <title>Dynamics Tips v1.5.0</title>
     </head>
     <body>
         <!-- Contenido de la página -->
+    </body>
+</html>
+```
+Otra forma es también agregar los estilos de manera separada a la lógica de la librería.
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://ghcdn.rawgit.org/FedericoManzano/dynamics-tips-v1.5.0-fuente/master/dist/css/estilos-dynamics.min.css">
+    
+        <title>Dynamics Tips v1.5.0</title>
+    </head>
+    <body>
+        <!-- Contenido de la página -->
+
+
+        <script src="https://ghcdn.rawgit.org/FedericoManzano/dynamics-tips-v1.5.0-fuente/master/dist/js/dynamics.min.js"></script>
     </body>
 </html>
 ```
