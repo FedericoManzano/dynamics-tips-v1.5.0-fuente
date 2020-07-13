@@ -1,6 +1,6 @@
 import $ from "jquery";
 import Posicionamiento from "./Posicionamiento"
-
+import "../../css/estilos-dynamics.css"
 (function () {
 
     let origen = null 
