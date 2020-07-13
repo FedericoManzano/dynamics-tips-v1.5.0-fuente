@@ -122,6 +122,12 @@ import Posicionamiento from "./Posicionamiento"
 
     const eventoClick = (e) => {
         $(e).click((e) =>{
+            if(press) {
+                $(comp).hide()
+                $(".dropdown").hide()
+                press = false
+                return 
+            }
             activar(e)
         })
 
@@ -149,6 +155,8 @@ import Posicionamiento from "./Posicionamiento"
         comp = $("<div class='drop-complemento'>")
         $("body").append(comp)
         $(".dropdown-toggle").each((index, e) => {
+
+        
             elemento = e
             let evt = $(e).data("evt")
             let flecha = $("<span class='f-abajo'></span>")
@@ -176,11 +184,20 @@ import Posicionamiento from "./Posicionamiento"
             press = false
         })
 
+
         $(window).resize(() => {
             if(press) {
                 posicionar(elemento)
             }
         })
+
+        $(window).scroll(() => {
+            $(comp).hide()
+            $(".dropdown").hide()
+            press = false
+        })
+
+        
     }
 
     const destroy = () => {
