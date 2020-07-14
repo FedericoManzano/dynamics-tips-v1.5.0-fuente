@@ -1,7 +1,7 @@
 
 import $ from "jquery";
 import Posicionamiento from "./Posicionamiento"
-import "../../css/estilos-dynamics.css"
+
 (function () {
     let  comp  
     let press = false

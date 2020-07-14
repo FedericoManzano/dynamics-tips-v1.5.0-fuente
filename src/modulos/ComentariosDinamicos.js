@@ -1,6 +1,5 @@
 import $ from "jquery" 
 import Posicionamiento from "./Posicionamiento"
-import "../../css/estilos-dynamics.css"
 (function(){
 
     let comentario = null, 
@@ -88,6 +87,16 @@ import "../../css/estilos-dynamics.css"
                     Posicionamiento.posicionarAbajo(origen, comentario)
                 else if(Posicionamiento.puedeArriba(origen, comentario))
                     Posicionamiento.posicionarArriba(origen, comentario)
+                else if(Posicionamiento.puedeIzquierda(origen, comentario))
+                    Posicionamiento.posicionarIzquierda(origen, comentario)
+                else if(Posicionamiento.puedeDerecha(origen, comentario))
+                    Posicionamiento.posicionarDerecha(origen, comentario)
+            break
+            default: 
+                if(Posicionamiento.puedeArriba(origen, comentario))
+                    Posicionamiento.posicionarArriba(origen, comentario)
+                else if(Posicionamiento.puedeAbajo(origen, comentario))
+                    Posicionamiento.posicionarAbajo(origen, comentario)
                 else if(Posicionamiento.puedeIzquierda(origen, comentario))
                     Posicionamiento.posicionarIzquierda(origen, comentario)
                 else if(Posicionamiento.puedeDerecha(origen, comentario))

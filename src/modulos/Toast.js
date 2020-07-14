@@ -1,5 +1,5 @@
 import $ from "jquery"
-import "../../css/estilos-dynamics.css"
+
 class Toast {
 
 
